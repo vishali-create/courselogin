@@ -1,0 +1,28 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run installation commands
+        run: |
+          echo "Running setup..."
+          echo "Installing dependencies (demo)"
+          echo "All setup complete!"
+
+      - name: Run test cases
+        run: |
+          echo "Running demo tests..."
+          echo "All tests passed successfully."
+
+      - name: Deploy script
+        run: |
+          echo "Deployment step executed (demo)."
